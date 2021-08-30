@@ -5,7 +5,7 @@ function getUserId(userName) {
   .then(data => data.graphql.user.id)
 }
 
-async function main(userName = "suvimarja_humavoid") {
+async function main(userName = "") {
   let user_id = await getUserId(userName)
   let query_hash = await getHash();
   let variables = {"id": user_id, "include_reel": false, "fetch_mutual": false, "first": 50, "after": "QVFCU2w2Wm5Bd0d4LW9ZVnFxc3htb2pFYTgtMkpWampxSGFiajhFRUNCWGFldUxUMnFsTnY1el90QS1FMVdHYU1QZ2FGTW1OZDJkQTJwdE1fVU5NSlp2Zg=="}
